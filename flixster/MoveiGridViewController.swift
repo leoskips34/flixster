@@ -10,7 +10,7 @@ import UIKit
 import AlamofireImage
 
 class MoveiGridViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-    
+
     @IBOutlet weak var collectionView: UICollectionView!
     
     var movies = [[String:Any]]()
@@ -32,9 +32,7 @@ class MoveiGridViewController: UIViewController, UICollectionViewDataSource, UIC
               let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
 
             self.movies = dataDictionary["results"] as! [[String:Any]]
-            
-            print(self.movies)
-            
+                        
             print(dataDictionary)
             
               // TODO: Get the array of movies

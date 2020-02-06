@@ -196,7 +196,7 @@
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieGridCell" id="8Jb-8S-j7L" customClass="MovieGridCell" customModule="flixster" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="132" height="199"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="t6D-RW-g0G">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="t6D-RW-g0G" customClass="MovieGridCell" customModule="flixster" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="132" height="199"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -208,7 +208,7 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="132" height="199"/>
                                         <connections>
-                                            <outlet property="posterView" destination="t6D-RW-g0G" id="aTw-zk-msH"/>
+                                            <outlet property="posterView" destination="E5r-Vo-9XH" id="kLo-ii-nXo"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
