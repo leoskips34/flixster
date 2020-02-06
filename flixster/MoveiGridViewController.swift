@@ -11,8 +11,6 @@ import AlamofireImage
 
 class MoveiGridViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    
-
     @IBOutlet weak var collectionView: UICollectionView!
     
     var movies = [[String:Any]]()
@@ -55,7 +53,7 @@ class MoveiGridViewController: UIViewController, UICollectionViewDataSource, UIC
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieGridCell", for: indexPath) as! MovieGridCell
         
-        let movie = movies[indexPath.item]
+       let movie = movies[indexPath.item]
         
         let baseURL = "https://image.tmdb.org/t/p/w185"
         let postPath = movie["poster_path"] as! String
