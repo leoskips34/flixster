@@ -99,7 +99,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d4L-KD-6KV">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="294"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="331"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SNV-Vb-Eio">
@@ -114,7 +114,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFA-y9-Oqb">
-                                <rect key="frame" x="163" y="302" width="231" height="49"/>
+                                <rect key="frame" x="163" y="368" width="231" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -126,7 +126,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="AKR-yZ-65b"/>
                     <connections>
-                        <outlet property="backdropView" destination="zth-qf-YRN" id="5Y8-43-rJU"/>
+                        <outlet property="backdropView" destination="d4L-KD-6KV" id="LLI-4u-xVk"/>
                         <outlet property="posterView" destination="SNV-Vb-Eio" id="zOe-6a-cil"/>
                         <outlet property="synopsisLabel" destination="i4s-XQ-mH6" id="lGm-i0-fHg"/>
                         <outlet property="titleLabel" destination="ZFA-y9-Oqb" id="exp-Uy-d2X"/>
