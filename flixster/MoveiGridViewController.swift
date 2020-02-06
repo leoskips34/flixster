@@ -20,6 +20,16 @@ class MoveiGridViewController: UIViewController, UICollectionViewDataSource, UIC
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        
+        layout.minimumLineSpacing = 4
+        layout.minimumInteritemSpacing = 4
+        
+        let width = (view.frame.size.width * 2) / 3
+        
+        layout.itemSize = CGSize (width: width, height: width * 3/2)
+        
 
        let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
@@ -32,6 +42,9 @@ class MoveiGridViewController: UIViewController, UICollectionViewDataSource, UIC
               let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
 
             self.movies = dataDictionary["results"] as! [[String:Any]]
+            
+            self.collectionView.reloadData()
+            print (self.movies)
                         
             print(dataDictionary)
             
@@ -60,6 +73,21 @@ class MoveiGridViewController: UIViewController, UICollectionViewDataSource, UIC
         cell.posterView.af_setImage(withURL: posterURL)
         
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // Find selected movie
+        let cell = sender as! UICollectionViewCell
+        let indexPath = collectionView.indexPath(for: cell)!
+        let movie = movies[indexPath.item]
+        
+        // Pass the selected movie to the Superhero Details VC
+        let detailsViewController = segue.destination as! MovieDetailsViewController
+        detailsViewController.movie = movie
+        
+        // Deselects the row
+        collectionView.deselectItem(at: indexPath, animated: true)
     }
     
 
