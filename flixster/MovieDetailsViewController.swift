@@ -24,7 +24,9 @@ class MovieDetailsViewController: UIViewController {
         // Do any additional setup after loading the view
         
          titleLabel.text = movie["title"] as? String
+        titleLabel.sizeToFit()
                synopsisLabel.text = movie["overview"] as? String
+        synopsisLabel.sizeToFit()
                let baseURL = "https://image.tmdb.org/t/p/w185"
                      let postPath = movie["poster_path"] as! String
                      let posterURL = URL(string: baseURL + postPath)!
